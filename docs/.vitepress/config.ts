@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: 'en-US',
-  title: 'VitePress',
+  title: '刘云生-帮助手册',
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
@@ -31,5 +31,28 @@ export default defineConfig({
         ],
       },
     ],
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索文档' },
+          modal: {
+            displayDetails: '显示详情',
+            resetButtonTitle: '重置',
+            backButtonTitle: '关闭搜索',
+            noResultsText: '未匹配到结果',
+            footer: {
+              selectText: '选择',
+              selectKeyAriaLabel: '确认',
+              navigateText: '切换',
+              navigateUpKeyAriaLabel: '向上',
+              navigateDownKeyAriaLabel: '向下',
+              closeText: '关闭',
+              closeKeyAriaLabel: '取消',
+            },
+          },
+        },
+      },
+    },
   },
 });
